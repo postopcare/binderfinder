@@ -87,6 +87,11 @@ overbust.addEventListener("keypress",function(e){
           listitem.className='list-group-item';
           listitem.innerText = "Brand: " + result.brand + " , Size : " + result.size
         });
+      } else {
+        var listitem = document.createElement('li');
+        ul.appendChild(listitem);
+        listitem.className='list-group-item';
+        listitem.innerText = "No match"
       }
       resultdisplay.appendChild(ul);
       resultdisplay.style="display: block"
@@ -118,6 +123,11 @@ underbust.addEventListener("keypress",function(e){
           listitem.className='list-group-item';
           listitem.innerText = "Brand: " + result.brand + " , Size : " + result.size
         });
+      } else {
+        var listitem = document.createElement('li');
+        ul.appendChild(listitem);
+        listitem.className='list-group-item';
+        listitem.innerText = "No match"
       }
       resultdisplay.appendChild(ul);
       resultdisplay.style="display: block"

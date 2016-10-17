@@ -118,8 +118,6 @@ underbust.addEventListener("keypress",function(e){
           listitem.className='list-group-item';
           listitem.innerText = "Brand: " + result.brand + " , Size : " + result.size
         });
-      } else {
-        RHeader.innerText = "Nothing found "
       }
       resultdisplay.appendChild(ul);
       resultdisplay.style="display: block"
@@ -127,8 +125,7 @@ underbust.addEventListener("keypress",function(e){
       console.log("nothing")
     }
   }
-
-})
+});
 function uniq(a) {
     return a.sort(function(a,b){
       return a.brand - b.brand

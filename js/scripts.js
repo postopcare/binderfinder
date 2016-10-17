@@ -109,12 +109,16 @@ underbust.addEventListener("keypress",function(e){
       console.log("There are results");
       var ul = document.createElement('ul');
       ul.className='list-group';
-      results.forEach(function(result){
-        var listitem = document.createElement('li');
-        listitem.className='list-group-item';
-        listitem.innerText = "Brand: " + result.brand + " Size : " + result.size
-        ul.appendChild(listitem);
-      });
+      if(results.length>0){
+        results.forEach(function(result){
+          var listitem = document.createElement('li');
+          listitem.className='list-group-item';
+          listitem.innerText = "Brand: " + result.brand + " Size : " + result.size
+          ul.appendChild(listitem);
+        });
+      } else {
+        RHeader.innerText = "Nothing found"
+      }
       resultdisplay.appendChild(ul);
       resultdisplay.style="display: block"
     } else {

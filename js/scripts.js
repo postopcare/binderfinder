@@ -99,10 +99,6 @@ underbust.addEventListener("keypress",function(e){
   var key = e.keyCode ;
   var results = null;
   if(key===13){
-    var removeThem = document.getElementsByClassName("results");
-    Array.prototype.slice.call(null,removeThem).forEach(function(element){
-      resultdisplay.removeChild(element)
-    })
     e.preventDefault();
     try {
       var size = parseFloat(e.target.value);

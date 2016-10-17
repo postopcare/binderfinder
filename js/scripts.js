@@ -97,6 +97,7 @@ underbust.addEventListener("keypress",function(e){
   var key = e.keyCode ;
   var results = null;
   if(key===13){
+
     e.preventDefault();
     try {
       var size = parseFloat(e.target.value);
@@ -108,16 +109,16 @@ underbust.addEventListener("keypress",function(e){
     if(results){
       console.log("There are results");
       var ul = document.createElement('ul');
-      ul.className='list-group';
+      ul.className='list-group results';
       if(results.length>0){
         results.forEach(function(result){
           var listitem = document.createElement('li');
-          listitem.className='list-group-item';
-          listitem.innerText = "Brand: " + result.brand + " Size : " + result.size
           ul.appendChild(listitem);
+          listitem.className='list-group-item';
+          listitem.innerText = "Brand: " + result.brand + " , Size : " + result.size
         });
       } else {
-        RHeader.innerText = "Nothing found"
+        RHeader.innerText = "Nothing found "
       }
       resultdisplay.appendChild(ul);
       resultdisplay.style="display: block"

@@ -79,13 +79,15 @@ overbust.addEventListener("keypress",function(e){
     if(results){
       console.log("There are results");
       var ul = document.createElement('ul');
-      ul.class='list-group';
-      results.forEach(function(result){
-        var listitem = document.createElement('li');
-        listitem.class='list-group-item';
-        listitem.innerText = "Brand: " + result.brand + " Size : " + result.size
-        ul.appendChild(listitem);
-      });
+      ul.className='list-group results';
+      if(results.length>0){
+        results.forEach(function(result){
+          var listitem = document.createElement('li');
+          ul.appendChild(listitem);
+          listitem.className='list-group-item';
+          listitem.innerText = "Brand: " + result.brand + " , Size : " + result.size
+        });
+      }
       resultdisplay.appendChild(ul);
       resultdisplay.style="display: block"
     } else {

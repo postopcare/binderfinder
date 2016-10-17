@@ -81,6 +81,11 @@ overbust.addEventListener("keypress",function(e){
       var ul = document.createElement('ul');
       ul.className='list-group results';
       if(results.length>0){
+        var resultlistItem = document.createElement('li');
+        ul.appendChild(resultlistItem);
+        resultlistItem.className='list-group-item';
+        resultlistItem.innerText = "Results for chest size: " + size + " inches";
+
         results.forEach(function(result){
           var listitem = document.createElement('li');
           ul.appendChild(listitem);
